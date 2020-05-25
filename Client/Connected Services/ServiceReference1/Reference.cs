@@ -20,6 +20,30 @@ namespace Client.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getFlightInScope", ReplyAction="http://tempuri.org/IService1/getFlightInScopeResponse")]
         System.Threading.Tasks.Task<string> getFlightInScopeAsync(string cityFrom, string cityTo, int scopeFrom, int scopeTo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getAllFlights", ReplyAction="http://tempuri.org/IService1/getAllFlightsResponse")]
+        string getAllFlights();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getAllFlights", ReplyAction="http://tempuri.org/IService1/getAllFlightsResponse")]
+        System.Threading.Tasks.Task<string> getAllFlightsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getFlightsFromTo", ReplyAction="http://tempuri.org/IService1/getFlightsFromToResponse")]
+        string getFlightsFromTo(string cityFrom, string cityTo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getFlightsFromTo", ReplyAction="http://tempuri.org/IService1/getFlightsFromToResponse")]
+        System.Threading.Tasks.Task<string> getFlightsFromToAsync(string cityFrom, string cityTo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getCitiesTo", ReplyAction="http://tempuri.org/IService1/getCitiesToResponse")]
+        string[] getCitiesTo();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getCitiesTo", ReplyAction="http://tempuri.org/IService1/getCitiesToResponse")]
+        System.Threading.Tasks.Task<string[]> getCitiesToAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getCitiesFrom", ReplyAction="http://tempuri.org/IService1/getCitiesFromResponse")]
+        string[] getCitiesFrom();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getCitiesFrom", ReplyAction="http://tempuri.org/IService1/getCitiesFromResponse")]
+        System.Threading.Tasks.Task<string[]> getCitiesFromAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,6 +79,38 @@ namespace Client.ServiceReference1 {
         
         public System.Threading.Tasks.Task<string> getFlightInScopeAsync(string cityFrom, string cityTo, int scopeFrom, int scopeTo) {
             return base.Channel.getFlightInScopeAsync(cityFrom, cityTo, scopeFrom, scopeTo);
+        }
+        
+        public string getAllFlights() {
+            return base.Channel.getAllFlights();
+        }
+        
+        public System.Threading.Tasks.Task<string> getAllFlightsAsync() {
+            return base.Channel.getAllFlightsAsync();
+        }
+        
+        public string getFlightsFromTo(string cityFrom, string cityTo) {
+            return base.Channel.getFlightsFromTo(cityFrom, cityTo);
+        }
+        
+        public System.Threading.Tasks.Task<string> getFlightsFromToAsync(string cityFrom, string cityTo) {
+            return base.Channel.getFlightsFromToAsync(cityFrom, cityTo);
+        }
+        
+        public string[] getCitiesTo() {
+            return base.Channel.getCitiesTo();
+        }
+        
+        public System.Threading.Tasks.Task<string[]> getCitiesToAsync() {
+            return base.Channel.getCitiesToAsync();
+        }
+        
+        public string[] getCitiesFrom() {
+            return base.Channel.getCitiesFrom();
+        }
+        
+        public System.Threading.Tasks.Task<string[]> getCitiesFromAsync() {
+            return base.Channel.getCitiesFromAsync();
         }
     }
 }

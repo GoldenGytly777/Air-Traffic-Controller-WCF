@@ -79,5 +79,23 @@ namespace air_traffic_controller_WCF
                     || (flight.Departure <= scopeTo && flight.Arrival <= scopeTo)
                     || (flight.Departure >= scopeFrom && flight.Arrival >= scopeFrom);
         }
+        public HashSet<string> getCitiesTo()
+        {
+            HashSet<string> uniqueCities = new HashSet<string>();
+            foreach(Flight flight in allFlights){
+                uniqueCities.Add(flight.CityTo);
+            }
+            return uniqueCities;
+        }
+
+        public HashSet<string> getCitiesFrom()
+        {
+            HashSet<string> uniqueCities = new HashSet<string>();
+            foreach (Flight flight in allFlights)
+            {
+                uniqueCities.Add(flight.CityFrom);
+            }
+            return uniqueCities;
+        }
     }
 }

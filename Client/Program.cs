@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Client.ServiceReference1;
 
 namespace GettingStartedClient
@@ -10,22 +8,31 @@ namespace GettingStartedClient
     {
         static void Main(string[] args)
         {
-            //Step 1: Create an instance of the WCF proxy.
             Service1Client client = new Service1Client();
-
-            // Step 2: Call the service operations.
-            // Call the Add service operation.
+            string [] citiesTo = client.getCitiesTo();
+            HashSet<string> citiesToUnique = new HashSet<string>();
+            foreach(string s in citiesTo)
+            {
+                citiesToUnique.Add(s);
+            }
+            string[] citiesFrom = client.getCitiesFrom();
+            HashSet<string> citiesFromUnique = new HashSet<string>();
+            foreach (string s in citiesFrom)
+            {
+                citiesFromUnique.Add(s);
+            }
+            
             do
             {
-                Console.WriteLine("Enter airport: ");
-                string cityFrom = Console.ReadLine();
-
-                Console.WriteLine("Enter airport destination: ");
-                string cityTo = Console.ReadLine();
-
-                Console.WriteLine("Scope from: ");
                 try
                 {
+                    Console.WriteLine("Enter airport: ");     
+                    string cityFrom = Console.ReadLine();
+                
+                    Console.WriteLine("Enter airport destination: ");
+                    string cityTo = Console.ReadLine();
+
+                    Console.WriteLine("Scope from: ");
                     int scopeFrom = int.Parse(Console.ReadLine());
 
                     Console.WriteLine("Scope to: ");
@@ -36,9 +43,13 @@ namespace GettingStartedClient
                     }else
                         Console.WriteLine("Wrong argument should be integer value between 0-23");
                 }
-                catch(FormatException e)
+                catch(FormatException)
                 {
                     Console.WriteLine("Wrong argument should be integer value between 0-23");
+                }
+                catch (ArgumentException)
+                {
+                    Console.WriteLine("Wrong city argument");
                 }
                 
 
@@ -49,6 +60,8 @@ namespace GettingStartedClient
             } while (Console.ReadKey().Key != ConsoleKey.Escape);
             client.Close();
         }
-        
+
+
+
     }
 }

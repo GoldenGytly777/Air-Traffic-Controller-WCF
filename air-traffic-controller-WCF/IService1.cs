@@ -13,7 +13,13 @@ namespace air_traffic_controller_WCF
     {
         [OperationContract]
         string getFlightInScope(string cityFrom, string cityTo, int scopeFrom, int scopeTo);
+        [OperationContract]
         string getAllFlights();
+        [OperationContract]
         string getFlightsFromTo(string cityFrom, string cityTo);
+        [OperationContract]
+        HashSet<string> getCitiesTo();
+        [OperationContract]
+        HashSet<string> getCitiesFrom();
     }
 }

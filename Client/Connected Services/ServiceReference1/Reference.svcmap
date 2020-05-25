@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a1acfd0d-af4f-4c46-b9e4-bdddea8194cc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="77de154e-6703-45e5-9d5c-8cd15e9345df" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,9 +22,10 @@
     <MetadataSource Address="http://localhost:8000/flyService/service/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="a55b8740-ec0c-4ae4-8044-cd68a19bda3b" SourceId="1" SourceUrl="http://localhost:8000/flyService/service/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="154ff66a-370e-46d0-a2f0-b8597034871d" SourceId="1" SourceUrl="http://localhost:8000/flyService/service/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="ccdf8af0-88c0-4896-a5b6-aa1871b1b7d9" SourceId="1" SourceUrl="http://localhost:8000/flyService/service/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="f536c20b-9cb6-4dfd-a980-bbe38fb48dc3" SourceId="1" SourceUrl="http://localhost:8000/flyService/service/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="fa202f60-87d7-487c-a5c5-7d7095b026ae" SourceId="1" SourceUrl="http://localhost:8000/flyService/service/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="3386c87a-9ef9-4c5c-bd31-5576817ac525" SourceId="1" SourceUrl="http://localhost:8000/flyService/service/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="62fffb12-9241-41e1-bdab-79f1e1d3bf3d" SourceId="1" SourceUrl="http://localhost:8000/flyService/service/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

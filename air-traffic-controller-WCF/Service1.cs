@@ -52,6 +52,14 @@ namespace air_traffic_controller_WCF
             return FlightsService.flightsToString(flishtsSchedule.findFlightFromTo(cityFrom, cityTo));
         }
 
-        
+        public HashSet<string> getCitiesTo()
+        {
+            return flishtsSchedule.getCitiesTo();
+        }
+
+        public HashSet<string> getCitiesFrom()
+        {
+            return flishtsSchedule.getCitiesFrom();
+        }
     }
 }
