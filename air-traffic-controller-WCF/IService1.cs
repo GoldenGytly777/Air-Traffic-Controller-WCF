@@ -12,12 +12,6 @@ namespace air_traffic_controller_WCF
     public interface IService1
     {
         [OperationContract]
-        string GetData(int value);
-
-        [OperationContract]
-        string ReadCsv();
-
-        [OperationContract]
         string getFlightInfo(string v1, string v2, int a);
 
     }
