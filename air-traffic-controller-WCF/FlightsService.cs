@@ -7,11 +7,26 @@ namespace air_traffic_controller_WCF
 {
     class FlightsService
     {
-         List<Flight> allFlights;
+        private List<Flight> allFlights;
+
+        internal List<Flight> AllFlights { get => allFlights; set => allFlights = value; }
 
         public FlightsService(List<Flight> flights)
         {
-            this.allFlights = flights;
+            this.AllFlights = flights;
+        }
+        public List<Flight> getAllFlights()
+        {
+            return AllFlights;
+        }
+        public static String flightsToString(List<Flight> flights)
+        {
+            StringBuilder flightsAsString = new StringBuilder();
+            foreach(Flight flight in flights)
+            {
+                flightsAsString.Append(flight.ToString());
+            }
+            return flightsAsString.ToString();
         }
         public List<Flight> findFlightFromToInScope(string cityFrom, string cityTo, int scopeFrom, int scopeTo)
         {
@@ -22,7 +37,7 @@ namespace air_traffic_controller_WCF
         public List<Flight> findFlightFromTo(string cityFrom, string cityTo)
         {
             List<Flight> flights = new List<Flight>();
-            foreach (Flight flight in allFlights)
+            foreach (Flight flight in AllFlights)
             {
                 if (checkCities(flight, cityFrom, cityTo))
                 {

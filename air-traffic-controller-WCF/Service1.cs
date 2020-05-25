@@ -39,7 +39,7 @@ namespace air_traffic_controller_WCF
         }
         public string getAllFlights()
         {
-            throw new NotImplementedException();
+            return FlightsService.flightsToString(flishtsSchedule.getAllFlights);
         }
 
         public string getFlightInScope(string cityFrom, string cityTo, int scopeFrom, int scopeTo)
