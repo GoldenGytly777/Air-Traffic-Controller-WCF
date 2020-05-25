@@ -9,15 +9,15 @@ namespace air_traffic_controller_WCF
     {
         private List<Flight> allFlights;
 
-        internal List<Flight> AllFlights { get => allFlights; set => allFlights = value; }
+        
 
         public FlightsService(List<Flight> flights)
         {
-            this.AllFlights = flights;
+            this.allFlights = flights;
         }
         public List<Flight> getAllFlights()
         {
-            return AllFlights;
+            return allFlights;
         }
         public static String flightsToString(List<Flight> flights)
         {
@@ -37,7 +37,7 @@ namespace air_traffic_controller_WCF
         public List<Flight> findFlightFromTo(string cityFrom, string cityTo)
         {
             List<Flight> flights = new List<Flight>();
-            foreach (Flight flight in AllFlights)
+            foreach (Flight flight in allFlights)
             {
                 if (checkCities(flight, cityFrom, cityTo))
                 {
@@ -46,6 +46,12 @@ namespace air_traffic_controller_WCF
             }
             return flights;
         }
+
+        internal static string flightsToString(Func<List<Flight>> getAllFlights)
+        {
+            throw new NotImplementedException();
+        }
+
         private bool checkCities(Flight flight, string cityFrom, string cityTo)
         {
             return (flight.CityFrom.Equals(cityFrom) && flight.CityTo.Equals(cityTo));

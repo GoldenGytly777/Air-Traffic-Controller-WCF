@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace test
+namespace air_traffic_controller_WCF
 {
     class Flight
     {

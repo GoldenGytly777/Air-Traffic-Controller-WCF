@@ -1,0 +1,7 @@
+X:\C#\Air-Traffic-Controller-WCF\air-traffic-controller-WCF\bin\Debug\air-traffic-controller-WCF.dll.config
+X:\C#\Air-Traffic-Controller-WCF\air-traffic-controller-WCF\bin\Debug\air-traffic-controller-WCF.dll
+X:\C#\Air-Traffic-Controller-WCF\air-traffic-controller-WCF\bin\Debug\air-traffic-controller-WCF.pdb
+X:\C#\Air-Traffic-Controller-WCF\air-traffic-controller-WCF\obj\Debug\air-traffic-controller-WCF.csprojAssemblyReference.cache
+X:\C#\Air-Traffic-Controller-WCF\air-traffic-controller-WCF\obj\Debug\air-traffic-controller-WCF.csproj.CoreCompileInputs.cache
+X:\C#\Air-Traffic-Controller-WCF\air-traffic-controller-WCF\obj\Debug\air-traffic-controller-WCF.dll
+X:\C#\Air-Traffic-Controller-WCF\air-traffic-controller-WCF\obj\Debug\air-traffic-controller-WCF.pdb
