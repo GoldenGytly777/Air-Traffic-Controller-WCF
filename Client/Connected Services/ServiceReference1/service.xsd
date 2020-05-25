@@ -6,8 +6,7 @@
       <xs:sequence>
         <xs:element minOccurs="0" name="cityFrom" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="cityTo" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="scopeFrom" type="xs:int" />
-        <xs:element minOccurs="0" name="scopeTo" type="xs:int" />
+        <xs:element minOccurs="0" name="scope" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

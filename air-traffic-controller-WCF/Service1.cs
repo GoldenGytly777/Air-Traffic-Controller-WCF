@@ -42,9 +42,9 @@ namespace air_traffic_controller_WCF
             return FlightsService.flightsToString(flishtsSchedule.getAllFlights);
         }
 
-        public string getFlightInScope(string cityFrom, string cityTo, int scopeFrom, int scopeTo)
+        public string getFlightInScope(string cityFrom, string cityTo, int scope)
         {
-            return FlightsService.flightsToString(flishtsSchedule.findFlightFromToInScope(cityFrom, cityTo, scopeFrom, scopeTo));
+            return FlightsService.flightsToString(flishtsSchedule.findFlightFromToInScope(cityFrom, cityTo, scope));
         }
 
         public string getFlightsFromTo(string cityFrom, string cityTo)

@@ -12,7 +12,7 @@ namespace air_traffic_controller_WCF
     public interface IService1
     {
         [OperationContract]
-        string getFlightInScope(string cityFrom, string cityTo, int scopeFrom, int scopeTo);
+        string getFlightInScope(string cityFrom, string cityTo, int scope);
         [OperationContract]
         string getAllFlights();
         [OperationContract]

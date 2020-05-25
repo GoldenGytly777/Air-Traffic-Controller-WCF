@@ -16,10 +16,10 @@ namespace Client.ServiceReference1 {
     public interface IService1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getFlightInScope", ReplyAction="http://tempuri.org/IService1/getFlightInScopeResponse")]
-        string getFlightInScope(string cityFrom, string cityTo, int scopeFrom, int scopeTo);
+        string getFlightInScope(string cityFrom, string cityTo, int scope);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getFlightInScope", ReplyAction="http://tempuri.org/IService1/getFlightInScopeResponse")]
-        System.Threading.Tasks.Task<string> getFlightInScopeAsync(string cityFrom, string cityTo, int scopeFrom, int scopeTo);
+        System.Threading.Tasks.Task<string> getFlightInScopeAsync(string cityFrom, string cityTo, int scope);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getAllFlights", ReplyAction="http://tempuri.org/IService1/getAllFlightsResponse")]
         string getAllFlights();
@@ -73,12 +73,12 @@ namespace Client.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public string getFlightInScope(string cityFrom, string cityTo, int scopeFrom, int scopeTo) {
-            return base.Channel.getFlightInScope(cityFrom, cityTo, scopeFrom, scopeTo);
+        public string getFlightInScope(string cityFrom, string cityTo, int scope) {
+            return base.Channel.getFlightInScope(cityFrom, cityTo, scope);
         }
         
-        public System.Threading.Tasks.Task<string> getFlightInScopeAsync(string cityFrom, string cityTo, int scopeFrom, int scopeTo) {
-            return base.Channel.getFlightInScopeAsync(cityFrom, cityTo, scopeFrom, scopeTo);
+        public System.Threading.Tasks.Task<string> getFlightInScopeAsync(string cityFrom, string cityTo, int scope) {
+            return base.Channel.getFlightInScopeAsync(cityFrom, cityTo, scope);
         }
         
         public string getAllFlights() {

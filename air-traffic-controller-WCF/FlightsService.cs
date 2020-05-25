@@ -28,10 +28,10 @@ namespace air_traffic_controller_WCF
             }
             return flightsAsString.ToString();
         }
-        public List<Flight> findFlightFromToInScope(string cityFrom, string cityTo, int scopeFrom, int scopeTo)
+        public List<Flight> findFlightFromToInScope(string cityFrom, string cityTo, int scope)
         {
             List<Flight> flightsFromTo = findFlightFromTo(cityFrom, cityTo);
-            List<Flight> flightsInScopeFromTo = findFlightInScope(flightsFromTo, scopeFrom, scopeTo);
+            List<Flight> flightsInScopeFromTo = findFlightInScope(flightsFromTo, scope);
             return flightsInScopeFromTo;
         }
         public List<Flight> findFlightFromTo(string cityFrom, string cityTo)
@@ -56,28 +56,22 @@ namespace air_traffic_controller_WCF
         {
             return (flight.CityFrom.ToUpper().Equals(cityFrom.ToUpper()) && flight.CityTo.ToUpper().Equals(cityTo.ToUpper()));
         }
-        private List<Flight> findFlightInScope(List<Flight> flights, int scopeFrom, int scopeTo)
+        private List<Flight> findFlightInScope(List<Flight> flights, int scope)
         {
             List<Flight> flightsInScope = new List<Flight>();
             foreach (Flight flight in flights)
             {
-                if (checkScope(flight, scopeFrom, scopeTo))
+                if (checkScope(flight, scope))
                 {
                     flightsInScope.Add(flight);
                 }
             }
             return flightsInScope;
         }
-        private bool checkScope(Flight flight, int scopeFrom, int scopeTo)
+        private bool checkScope(Flight flight, int scope)
         {
             //It is very simplified
-            if (scopeFrom <= scopeTo)
-            {
-                return flight.Departure >= scopeFrom && flight.Arrival <= scopeTo;
-            }
-            return (flight.Departure >= scopeFrom && flight.Arrival <= scopeTo)
-                    || (flight.Departure <= scopeTo && flight.Arrival <= scopeTo)
-                    || (flight.Departure >= scopeFrom && flight.Arrival >= scopeFrom);
+            return flight.Arrival - flight.Departure <= scope;
         }
         public HashSet<string> getCitiesTo()
         {

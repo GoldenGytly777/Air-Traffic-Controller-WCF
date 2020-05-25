@@ -29,7 +29,7 @@ namespace GettingStartedClient
             {
                 try
                 {
-                    string response = client.getFlightInScope(getFromCity(citiesFromUnique), getToCity(citiesToUnique), getScopeFrom(), getScopeTo());
+                    string response = client.getFlightInScope(getFromCity(citiesFromUnique), getToCity(citiesToUnique), getScope());
                     if (response.Equals(""))
                     {
                         Console.WriteLine("There is no connection between this cities in this scope");
@@ -62,21 +62,12 @@ namespace GettingStartedClient
                 throw new ArgumentException("There is no airport in this city!");
             return cityTo;
         }
-        static private int getScopeFrom()
+        static private int getScope()
         {
-            Console.WriteLine("Scope from: ");
+            Console.WriteLine("Scope: ");
             int scopeFrom = int.Parse(Console.ReadLine());
-            if (scopeFrom >= 24 || scopeFrom < 0)
-                throw new FormatException("Number should be integer value between 0-23");
             return scopeFrom;
         }
-        static private int getScopeTo()
-        {
-            Console.WriteLine("Scope to: ");
-            int scopeTo = int.Parse(Console.ReadLine());
-            if (scopeTo >= 24 || scopeTo < 0)
-                throw new FormatException("Number should be integer value between 0-23");
-            return scopeTo;
+
         }
-    }
 }
