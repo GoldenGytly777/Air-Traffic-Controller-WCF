@@ -54,7 +54,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="resources\flightsSchedule.csv" />
+    <None Include="..\..\TEST\test\Resources\flightsSchedule.csv">
+      <Link>resources\flightsSchedule.csv</Link>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

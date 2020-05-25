@@ -83,7 +83,7 @@ namespace air_traffic_controller_WCF
         {
             HashSet<string> uniqueCities = new HashSet<string>();
             foreach(Flight flight in allFlights){
-                uniqueCities.Add(flight.CityTo);
+                uniqueCities.Add(flight.CityTo.ToUpper());
             }
             return uniqueCities;
         }
@@ -93,7 +93,7 @@ namespace air_traffic_controller_WCF
             HashSet<string> uniqueCities = new HashSet<string>();
             foreach (Flight flight in allFlights)
             {
-                uniqueCities.Add(flight.CityFrom);
+                uniqueCities.Add(flight.CityFrom.ToUpper());
             }
             return uniqueCities;
         }
