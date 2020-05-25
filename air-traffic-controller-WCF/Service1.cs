@@ -49,7 +49,7 @@ namespace air_traffic_controller_WCF
 
         public string getFlightsFromTo(string cityFrom, string cityTo)
         {
-            throw new NotImplementedException();
+            return FlightsService.flightsToString(flishtsSchedule.findFlightFromTo(cityFrom, cityTo));
         }
 
         
