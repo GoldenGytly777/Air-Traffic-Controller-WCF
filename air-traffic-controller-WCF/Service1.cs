@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -13,7 +14,21 @@ namespace air_traffic_controller_WCF
         //TODO read csv
         //zapisanie do listy wiadomosci z csv
         //wyslanie poszczegolnych rekordow wdl patternu
-        public string getFlightInfo(string v1, string v2, int a)
+        string patha = @"..\loty.csv";
+
+        private List<List<String>> flightsSchedule = new List<List<String>>();
+
+        public string getAllFlights()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string getFlightInScope(string cityFrom, string cityTo, int scopeFrom, int scopeTo)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string getFlightsFromTo(string cityFrom, string cityTo)
         {
             throw new NotImplementedException();
         }

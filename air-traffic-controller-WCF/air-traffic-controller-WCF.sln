@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "air-traffic-controller-WCF", "air-traffic-controller-WCF.csproj", "{FF8EB722-1A28-4F8B-95C1-EE7DA03E727D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host", "..\Host\Host.csproj", "{40EA49B4-15AA-4691-AA25-5F8C874525E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "..\Client\Client.csproj", "{2AD30A49-DF40-4DB5-AB31-61846B31AC03}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{FF8EB722-1A28-4F8B-95C1-EE7DA03E727D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF8EB722-1A28-4F8B-95C1-EE7DA03E727D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF8EB722-1A28-4F8B-95C1-EE7DA03E727D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40EA49B4-15AA-4691-AA25-5F8C874525E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40EA49B4-15AA-4691-AA25-5F8C874525E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40EA49B4-15AA-4691-AA25-5F8C874525E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40EA49B4-15AA-4691-AA25-5F8C874525E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AD30A49-DF40-4DB5-AB31-61846B31AC03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AD30A49-DF40-4DB5-AB31-61846B31AC03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AD30A49-DF40-4DB5-AB31-61846B31AC03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AD30A49-DF40-4DB5-AB31-61846B31AC03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
