@@ -24,12 +24,25 @@ namespace GettingStartedClient
                 string cityTo = Console.ReadLine();
 
                 Console.WriteLine("Scope from: ");
-                int scopeFrom = int.Parse(Console.ReadLine());
+                try
+                {
+                    int scopeFrom = int.Parse(Console.ReadLine());
 
-                Console.WriteLine("Scope to: ");
-                int scopeTo = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Scope to: ");
+                    int scopeTo = int.Parse(Console.ReadLine());
+                    if((scopeFrom<24 && scopeFrom >= 0) && (scopeTo < 24 && scopeTo >= 0))
+                    {
+                        Console.WriteLine(client.getFlightInScope(cityFrom, cityTo, scopeFrom, scopeTo));
+                    }else
+                        Console.WriteLine("Wrong argument should be integer value between 0-23");
+                }
+                catch(FormatException e)
+                {
+                    Console.WriteLine("Wrong argument should be integer value between 0-23");
+                }
+                
 
-                Console.WriteLine(client.getFlightInScope(cityFrom, cityTo, scopeFrom, scopeTo));
+                
 
                 Console.WriteLine("Type ESC to exit");
              
