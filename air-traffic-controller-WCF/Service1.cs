@@ -14,7 +14,7 @@ namespace air_traffic_controller_WCF
         //TODO read csv
         //zapisanie do listy wiadomosci z csv
         //wyslanie poszczegolnych rekordow wdl patternu
-        string patha = @"..\loty.csv";
+        string patha = @"..\..\..\Resources\flightsSchedule.csv";
 
         private List<List<String>> flightsSchedule = new List<List<String>>();
 
