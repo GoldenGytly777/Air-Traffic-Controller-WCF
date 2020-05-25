@@ -54,7 +54,7 @@ namespace air_traffic_controller_WCF
 
         private bool checkCities(Flight flight, string cityFrom, string cityTo)
         {
-            return (flight.CityFrom.Equals(cityFrom) && flight.CityTo.Equals(cityTo));
+            return (flight.CityFrom.ToUpper().Equals(cityFrom.ToUpper()) && flight.CityTo.ToUpper().Equals(cityTo.ToUpper()));
         }
         private List<Flight> findFlightInScope(List<Flight> flights, int scopeFrom, int scopeTo)
         {
