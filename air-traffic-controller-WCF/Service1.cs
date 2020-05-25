@@ -12,20 +12,17 @@ namespace air_traffic_controller_WCF
     {
         public string GetData(int value)
         {
-            return string.Format("You entered: {0}", value);
+            throw new NotImplementedException();
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public string getFlightInfo(string v1, string v2, int a)
         {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+            throw new NotImplementedException();
+        }
+
+        public string ReadCsv()
+        {
+            throw new NotImplementedException();
         }
     }
 }
