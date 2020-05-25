@@ -11,13 +11,32 @@ namespace air_traffic_controller_WCF
     // UWAGA: możesz użyć polecenia „Zmień nazwę” w menu „Refaktoryzuj”, aby zmienić nazwę klasy „Service1” w kodzie i pliku konfiguracji.
     public class Service1 : IService1
     {
-        //TODO read csv
-        //zapisanie do listy wiadomosci z csv
-        //wyslanie poszczegolnych rekordow wdl patternu
+        //hardcoded
         string patha = @"..\..\..\Resources\flightsSchedule.csv";
+        FlightsService flishtsSchedule;
 
-        private List<List<String>> flightsSchedule = new List<List<String>>();
-
+        public Service1()
+        {
+            flishtsSchedule = createFlightService();
+        }
+        private FlightsService createFlightService()
+        {
+            return new FlightsService(convertCSVFileToListOfFlights());
+        }
+        private List<Flight> convertCSVFileToListOfFlights()
+        {
+            List<Flight> flights = new List<Flight>();
+            using (var reader = new StreamReader(patha))
+            {
+                while (!reader.EndOfStream)
+                {
+                    string row = reader.ReadLine();
+                    string[] elementsOfRow = row.Split(',');
+                    flights.Add(new Flight(elementsOfRow[0], elementsOfRow[1], int.Parse(elementsOfRow[2]), int.Parse(elementsOfRow[3])));
+                }
+            }
+            return flights;
+        }
         public string getAllFlights()
         {
             throw new NotImplementedException();
@@ -32,5 +51,7 @@ namespace air_traffic_controller_WCF
         {
             throw new NotImplementedException();
         }
+
+        
     }
 }
