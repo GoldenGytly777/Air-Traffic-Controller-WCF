@@ -15,31 +15,10 @@ namespace air_traffic_controller_WCF
         string GetData(int value);
 
         [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
+        string ReadCsv();
 
-        // TODO: dodaj tutaj operacje usługi
-    }
+        [OperationContract]
+        string getFlightInfo(string v1, string v2, int a);
 
-    // Użyj kontraktu danych, jak pokazano w poniższym przykładzie, aby dodać typy złożone do operacji usługi.
-    // Możesz dodać pliki XSD do projektu. Po skompilowaniu projektu możesz bezpośrednio użyć zdefiniowanych w nim typów danych w przestrzeni nazw „air_traffic_controller_WCF.ContractType”.
-    [DataContract]
-    public class CompositeType
-    {
-        bool boolValue = true;
-        string stringValue = "Hello ";
-
-        [DataMember]
-        public bool BoolValue
-        {
-            get { return boolValue; }
-            set { boolValue = value; }
-        }
-
-        [DataMember]
-        public string StringValue
-        {
-            get { return stringValue; }
-            set { stringValue = value; }
-        }
     }
 }
