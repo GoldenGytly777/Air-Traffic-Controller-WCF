@@ -1,0 +1,11 @@
+X:\C#\Air-Traffic-Controller-WCF\Host\bin\Debug\Host.exe.config
+X:\C#\Air-Traffic-Controller-WCF\Host\bin\Debug\Host.exe
+X:\C#\Air-Traffic-Controller-WCF\Host\bin\Debug\Host.pdb
+X:\C#\Air-Traffic-Controller-WCF\Host\bin\Debug\air-traffic-controller-WCF.dll
+X:\C#\Air-Traffic-Controller-WCF\Host\bin\Debug\air-traffic-controller-WCF.pdb
+X:\C#\Air-Traffic-Controller-WCF\Host\bin\Debug\air-traffic-controller-WCF.dll.config
+X:\C#\Air-Traffic-Controller-WCF\Host\obj\Debug\Host.csprojAssemblyReference.cache
+X:\C#\Air-Traffic-Controller-WCF\Host\obj\Debug\Host.csproj.CoreCompileInputs.cache
+X:\C#\Air-Traffic-Controller-WCF\Host\obj\Debug\Host.csproj.CopyComplete
+X:\C#\Air-Traffic-Controller-WCF\Host\obj\Debug\Host.exe
+X:\C#\Air-Traffic-Controller-WCF\Host\obj\Debug\Host.pdb

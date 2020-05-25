@@ -1,0 +1,7 @@
+X:\C#\Air-Traffic-Controller-WCF\Client\bin\Debug\Client.exe.config
+X:\C#\Air-Traffic-Controller-WCF\Client\bin\Debug\Client.exe
+X:\C#\Air-Traffic-Controller-WCF\Client\bin\Debug\Client.pdb
+X:\C#\Air-Traffic-Controller-WCF\Client\obj\Debug\Client.csprojAssemblyReference.cache
+X:\C#\Air-Traffic-Controller-WCF\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+X:\C#\Air-Traffic-Controller-WCF\Client\obj\Debug\Client.exe
+X:\C#\Air-Traffic-Controller-WCF\Client\obj\Debug\Client.pdb
