@@ -44,7 +44,7 @@ namespace air_traffic_controller_WCF
 
         public string getFlightInScope(string cityFrom, string cityTo, int scope)
         {
-            return FlightsService.flightsToString(flishtsSchedule.findFlightFromToInScope(cityFrom, cityTo, scope));
+            return flishtsSchedule.findFlightFromToInScope(cityFrom, cityTo, scope);
         }
 
         public string getFlightsFromTo(string cityFrom, string cityTo)

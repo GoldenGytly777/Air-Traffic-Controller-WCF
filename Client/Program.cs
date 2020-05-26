@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ServiceModel;
 using Client.ServiceReference1;
 
 namespace GettingStartedClient
@@ -9,42 +10,59 @@ namespace GettingStartedClient
         
         static void Main(string[] args)
         {
-            HashSet<string> citiesToUnique = new HashSet<string>();
-            HashSet<string> citiesFromUnique = new HashSet<string>();
-            Service1Client client = new Service1Client();
-            string [] citiesTo = client.getCitiesTo();
-            
-            foreach(string s in citiesTo)
+            try
             {
-                citiesToUnique.Add(s);
-            }
-            string[] citiesFrom = client.getCitiesFrom();
-            
-            foreach (string s in citiesFrom)
-            {
-                citiesFromUnique.Add(s);
-            }
-            
-            do
-            {
-                try
+                HashSet<string> citiesToUnique = new HashSet<string>();
+                HashSet<string> citiesFromUnique = new HashSet<string>();
+                using (Service1Client client = new Service1Client())
                 {
-                    string response = client.getFlightInScope(getFromCity(citiesFromUnique), getToCity(citiesToUnique), getScope());
-                    if (response.Equals(""))
+                    string[] citiesTo = client.getCitiesTo();
+
+                    foreach (string s in citiesTo)
                     {
-                        Console.WriteLine("There is no connection between this cities in this scope");
+                        citiesToUnique.Add(s);
                     }
-                    else
-                    Console.WriteLine(response);
+                    string[] citiesFrom = client.getCitiesFrom();
+
+                    foreach (string s in citiesFrom)
+                    {
+                        citiesFromUnique.Add(s);
+                    }
+
+                    do
+                    {
+                        try
+                        {
+                            string response = client.getFlightInScope(getFromCity(citiesFromUnique), getToCity(citiesToUnique), getScope());
+                            if (response.Equals(""))
+                            {
+                                Console.WriteLine("There is no connection between this cities in this scope");
+                            }
+                            else
+                                Console.WriteLine(response);
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                        Console.WriteLine("Type ESC to exit");
+
+                    } while (Console.ReadKey().Key != ConsoleKey.Escape);
+                    client.Close();
                 }
-                catch(Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-                Console.WriteLine("Type ESC to exit");
-             
-            } while (Console.ReadKey().Key != ConsoleKey.Escape);
-            client.Close();
+                
+            }
+            catch (System.ServiceModel.EndpointNotFoundException ex)
+            {
+                //handle endpoint not found exception here
+                Console.WriteLine(ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                //general exception handler
+                Console.WriteLine(ex.ToString());
+            }
+
         }
         static private string getFromCity(HashSet<string> citiesFromUnique)
         {
